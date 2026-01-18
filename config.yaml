@@ -1,0 +1,47 @@
+# Configuration file untuk parameter proyek
+data:
+  raw_path: "data/raw/heart.csv"
+  processed_path: "data/processed/"
+  test_size: 0.2
+  val_size: 0.1
+  random_state: 42
+
+preprocessing:
+  scaling_method: "standardization"
+  handle_outliers: true
+  outlier_method: "IQR"
+
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+  
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+    random_state: 42
+  
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    random_state: 42
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+  cross_validation: 5
+
+explainability:
+  shap_samples: 100  # Jumlah sampel untuk SHAP background
+  plot_types:
+    - summary_plot
+    - waterfall_plot
+    - force_plot
+    - dependence_plot
