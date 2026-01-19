@@ -105,8 +105,3 @@ heart-disease-explainable-ai/
 
 ## 📈 Key Findings
 [Akan diisi setelah analisis]
-
-[//]: # (## 👥 Contributors )
-
-[//]: # ([Your Name])# Hear-Disease-explainable
-# Hear-Disease-explainable
